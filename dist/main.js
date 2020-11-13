@@ -4017,11 +4017,11 @@ var forms = function forms() {
       var statusMessage = document.createElement('div');
       statusMessage.classList.add('status');
       item.parentNode.appendChild(statusMessage);
-      item.classList.add('animated', 'fadeOut');
+      item.classList.add('fade');
       item.style.display = 'none';
       var statusImg = document.createElement('img');
       statusImg.setAttribute('src', message.spinner);
-      statusImg.classList.add('fadeIn');
+      statusImg.classList.add('fade');
       statusMessage.appendChild(statusImg);
       var textMessage = document.createElement('div');
       textMessage.textContent = message.loading;
@@ -4061,7 +4061,7 @@ var gallery = function gallery() {
       galleryWrapper = document.querySelector('.gallery'),
       bigImage = document.createElement('img'),
       scroll = Object(_calcScroll__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  imgPopup.classList.add('popup', 'animated', 'fade');
+  imgPopup.classList.add('popup', 'fade');
   galleryWrapper.appendChild(imgPopup);
   imgPopup.style.justifyContent = 'center';
   imgPopup.style.alignItems = 'center';
@@ -4148,7 +4148,7 @@ var modals = function modals() {
 
         windows.forEach(function (item) {
           item.style.display = 'none';
-          item.classList.add('animated', 'fadeIn');
+          item.classList.add('fade');
         });
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
@@ -4394,11 +4394,15 @@ var slider = function slider() {
     }
 
     items.forEach(function (item) {
+      return item.classList.remove('fadeSlow');
+    });
+    items.forEach(function (item) {
       return item.style.display = 'none';
     });
     dots.forEach(function (item) {
       return item.classList.remove('dot-active');
     });
+    items[slideIndex - 1].classList.add('fadeSlow');
     items[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].classList.add('dot-active');
   }
@@ -4556,4 +4560,4 @@ var timer = function timer() {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=script.js.map
+//# sourceMappingURL=main.js.map
