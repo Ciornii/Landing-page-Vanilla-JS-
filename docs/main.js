@@ -4514,7 +4514,7 @@ var tabs = function tabs() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var timer = function timer() {
-  var deadline = '2021-01-01';
+  var deadline = '2022-01-01';
 
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date()),
